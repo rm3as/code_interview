@@ -1,7 +1,7 @@
 from typing import List
 # テストケース
 # 0 [4] -> 0
-# 5 [-2] -> 1
+
 # 3 [-4, -2, 5, 6, 7] -> 2
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
