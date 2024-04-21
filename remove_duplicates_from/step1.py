@@ -1,8 +1,4 @@
 from typing import List
-# テストケース
-# [-4]
-# [3,3,3]
-# [-1, 4, 4]
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         prev_num = nums[0]

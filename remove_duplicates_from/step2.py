@@ -1,15 +1,12 @@
+# It does not matter what you leave beyond the returned k (hence they are underscores).
+# という指示文をstep1では読み落としていたので、step2ではこれを考慮して書いた
 from typing import List
-# "remove the duplicates in-place"と問題文に書いてあるのですが、numsは書き換えなくてよいのでしょうか？
-# テストケース
-# [2]
-# [1,6,8]
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        k = 1
-        for i in range(1, len(nums)):
-            if nums[i]==nums[i-1]: # 一個前の数と同じ数だった
+        i = 0
+        for j in range(1, len(nums)):
+            if nums[j] != nums[i]:
+                i += 1
+                nums[i] = nums[j]
                 
-                continue
-            i
-        return k
-        
+        return i+1
